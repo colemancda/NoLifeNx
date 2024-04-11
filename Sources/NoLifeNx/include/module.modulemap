@@ -1,0 +1,4 @@
+module NoLifeNx {
+    header "nx.hpp"
+    export *
+}
