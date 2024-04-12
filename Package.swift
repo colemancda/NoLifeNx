@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
@@ -16,11 +16,12 @@ let package = Package(
         ),
         .systemLibrary(
             name: "CLZ4",
-            pkgConfig: "liblz4",
+            pkgConfig: "lz4",
             providers: [
                 .brew(["lz4"]), 
-                .apt(["zlib1g-dev"])
-            ])
+                .apt(["liblz4-dev"])
+            ]
+        )
     ],
     cxxLanguageStandard: .cxx17
 )
